@@ -8,7 +8,7 @@ Community Project : [Feed Henry](http://feedhenry.org)
 Target Product: RHMAP  
 Product Versions: RHMAP 3.9.0+   
 Source: https://github.com/feedhenry-templates/welcome-ios  
-Prerequisites: fh-ios-swift-sdk : 3.+, Xcode : 7.2+, iOS SDK : iOS8+, CocoaPods: 0.39+
+Prerequisites: fh-ios-swift-sdk : 3.+, Xcode : 7.2+, iOS SDK : iOS8+, CocoaPods: 1.0.1+
 
 ## What is it?
 
