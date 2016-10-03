@@ -20,7 +20,6 @@
 		48DF9E651CDCFCF0008E8334 /* NativeAppInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48DF9E641CDCFCF0008E8334 /* NativeAppInfoViewController.swift */; };
 		48DF9E671CDCFD14008E8334 /* CloudIntegrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48DF9E661CDCFD14008E8334 /* CloudIntegrationViewController.swift */; };
 		48DF9E691CDCFD2B008E8334 /* StatisticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48DF9E681CDCFD2B008E8334 /* StatisticsViewController.swift */; };
-		A868916B5ED71BD1FB309B26 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FADCF9C1A32DD65FC7417FBC /* Pods.framework */; };
 		CD6016D158F24E06729A3C82 /* Pods_welcome_ios_swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC0543956F23FF76D50294F2 /* Pods_welcome_ios_swift.framework */; };
 /* End PBXBuildFile section */
 
@@ -45,7 +44,6 @@
 		4B7C3F63DC392B4D7613C071 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		842E20DD4E12A4FBB0AB84F0 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		DC0543956F23FF76D50294F2 /* Pods_welcome_ios_swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_welcome_ios_swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FADCF9C1A32DD65FC7417FBC /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,7 +51,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A868916B5ED71BD1FB309B26 /* Pods.framework in Frameworks */,
 				CD6016D158F24E06729A3C82 /* Pods_welcome_ios_swift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -64,7 +61,6 @@
 		458C0531034BAF9EA23F6F07 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				FADCF9C1A32DD65FC7417FBC /* Pods.framework */,
 				DC0543956F23FF76D50294F2 /* Pods_welcome_ios_swift.framework */,
 			);
 			name = Frameworks;
