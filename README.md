@@ -1,5 +1,7 @@
 # welcome-ios-swift [![Build Status](https://travis-ci.org/feedhenry-templates/welcome-ios-swift.png)](https://travis-ci.org/feedhenry-templates/welcome-ios-swift)
 
+> Obj-C version is available [here](https://github.com/feedhenry-templates/welcome-ios).
+
 Author: Daniel Passos, Corinne Krych   
 Level: Intermediate  
 Technologies: Objective-C, iOS, RHMAP, CocoaPods.
