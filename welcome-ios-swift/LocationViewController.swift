@@ -28,19 +28,19 @@ class LocationViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func retrieveWeatherInfo(sender: AnyObject) {
+    @IBAction func retrieveWeatherInfo(_ sender: AnyObject) {
         print("Call cloud was clicked")
-        self.weatherButton.enabled = false
+        self.weatherButton.isEnabled = false
         
         let args = ["lat":latitudeLabel.text ?? "", "lon": longitudeLabel.text ?? ""]
-        if let delegate = UIApplication.sharedApplication().delegate as? AppDelegate where !delegate.initSuccess {
+        if let delegate = UIApplication.shared.delegate as? AppDelegate, !delegate.initSuccess {
             delegate.presentAlert("Initialisation failure", message: "Relaunch the app once you fixed the configuration plist file.")
-            self.weatherButton.enabled = true
+            self.weatherButton.isEnabled = true
         } else { // init is successful
             FH.cloud("getWeather", method: HTTPMethod.POST,
-                     args: args, headers: nil,
+                     args: args as [String : AnyObject]?, headers: nil,
                      completionHandler: {(resp: Response, error: NSError?) -> Void in
-                        self.weatherButton.enabled = true
+                        self.weatherButton.isEnabled = true
                         if let error = error {
                             print("Cloud Call Failed, \(error)")
                             return

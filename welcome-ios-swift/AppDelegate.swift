@@ -10,12 +10,12 @@ import UIKit
 import FeedHenry
 
 @UIApplicationMain
-public class AppDelegate: UIResponder, UIApplicationDelegate {
+open class AppDelegate: UIResponder, UIApplicationDelegate {
 
-    public var window: UIWindow?
-    public var initSuccess = false
+    open var window: UIWindow?
+    open var initSuccess = false
 
-    public func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+    open func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         FH.init {(resp: Response, error: NSError?) -> Void in
             if let error = error {
@@ -33,10 +33,10 @@ public class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
     
-    public func presentAlert(title: String, message: String) {
-        let alert = UIAlertController(title: title, message: message, preferredStyle: .Alert)
-        alert.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
-        window?.rootViewController?.presentViewController(alert, animated: true, completion: nil)
+    open func presentAlert(_ title: String, message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        window?.rootViewController?.present(alert, animated: true, completion: nil)
     }
 }
 
