@@ -21,7 +21,7 @@ class NativeAppInfoViewController: UIViewController {
         if let delegate = UIApplication.shared.delegate as? AppDelegate, !delegate.initSuccess {
             delegate.presentAlert("Initialisation failure", message: "Relaunch the app once you fixed the configuration plist file.")
         } else { // init is successful
-            FH.cloud("getFhVars", method: HTTPMethod.POST,
+            FH.cloud(path: "getFhVars", method: HTTPMethod.POST,
                      args: nil, headers: nil,
                      completionHandler: {(resp: Response, error: NSError?) -> Void in
 

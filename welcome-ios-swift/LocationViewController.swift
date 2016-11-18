@@ -37,7 +37,7 @@ class LocationViewController: UIViewController {
             delegate.presentAlert("Initialisation failure", message: "Relaunch the app once you fixed the configuration plist file.")
             self.weatherButton.isEnabled = true
         } else { // init is successful
-            FH.cloud("getWeather", method: HTTPMethod.POST,
+            FH.cloud(path: "getWeather", method: HTTPMethod.POST,
                      args: args as [String : AnyObject]?, headers: nil,
                      completionHandler: {(resp: Response, error: NSError?) -> Void in
                         self.weatherButton.isEnabled = true
