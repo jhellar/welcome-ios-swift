@@ -30,7 +30,7 @@ class CallCloudViewController: UIViewController {
             delegate.presentAlert("Initialisation failure", message: "Relaunch the app once you fixed the configuration plist file.")
             self.cloudButton.isEnabled = true
         } else { // init is successful
-            FH.cloud("hello", method: HTTPMethod.POST,
+            FH.cloud(path: "hello", method: HTTPMethod.POST,
                      args: nil, headers: nil,
                      completionHandler: {(resp: Response, error: NSError?) -> Void in
                         self.cloudButton.isEnabled = true
