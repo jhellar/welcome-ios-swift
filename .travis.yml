@@ -1,5 +1,5 @@
 language: objective-c
-osx_image: xcode8
+osx_image: xcode8.1
 xcode_workspace: welcome-ios-swift.xcworkspace
 xcode_scheme: welcome-ios-swift
 xcode_sdk: iphonesimulator
@@ -16,4 +16,4 @@ script:
 branches:
   only:
     - master
-    - swift2.3
+    - swift3

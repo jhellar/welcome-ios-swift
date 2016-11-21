@@ -23,17 +23,17 @@ class CallCloudViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func callcloud(sender: UIButton) {
+    @IBAction func callcloud(_ sender: UIButton) {
         print("Call cloud was clicked")
-        self.cloudButton.enabled = false
-        if let delegate = UIApplication.sharedApplication().delegate as? AppDelegate where !delegate.initSuccess {
+        self.cloudButton.isEnabled = false
+        if let delegate = UIApplication.shared.delegate as? AppDelegate, !delegate.initSuccess {
             delegate.presentAlert("Initialisation failure", message: "Relaunch the app once you fixed the configuration plist file.")
-            self.cloudButton.enabled = true
+            self.cloudButton.isEnabled = true
         } else { // init is successful
-            FH.cloud("hello", method: HTTPMethod.POST,
+            FH.cloud(path: "hello", method: HTTPMethod.POST,
                      args: nil, headers: nil,
                      completionHandler: {(resp: Response, error: NSError?) -> Void in
-                        self.cloudButton.enabled = true
+                        self.cloudButton.isEnabled = true
                         if let error = error {
                             print("Cloud Call Failed, \(error)")
                             self.result.text = "Error during Cloud call: \(error.userInfo[NSLocalizedDescriptionKey]!)"
